@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct Grocery_App_iOS_RealmApp: App {
+    
+    init(){
+        let _ = Migrator()
+    }
+    
     var body: some Scene {
         WindowGroup {
             let _ = UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable") // Hide auto layout constain worning
