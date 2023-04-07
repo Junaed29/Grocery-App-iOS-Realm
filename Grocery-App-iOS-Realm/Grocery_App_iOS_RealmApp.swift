@@ -11,6 +11,8 @@ import SwiftUI
 struct Grocery_App_iOS_RealmApp: App {
     var body: some Scene {
         WindowGroup {
+            let _ = UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable") // Hide auto layout constain worning
+            let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path())  // Realm file
             ContentView()
         }
     }

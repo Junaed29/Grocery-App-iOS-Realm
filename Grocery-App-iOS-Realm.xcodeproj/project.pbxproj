@@ -13,6 +13,8 @@
 		E413BB0F29D9648000BC7908 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */; };
 		E413BB1729D96A8900BC7908 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E413BB1629D96A8900BC7908 /* Realm */; };
 		E413BB1929D96A8900BC7908 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E413BB1829D96A8900BC7908 /* RealmSwift */; };
+		E4F0E55B29DEE48D003DAF26 /* AddShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */; };
+		E4F0E55E29DEEAD7003DAF26 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E413BB0929D9647C00BC7908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E413BB0B29D9648000BC7908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListScreen.swift; sourceTree = "<group>"; };
+		E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 		E413BB0629D9647C00BC7908 /* Grocery-App-iOS-Realm */ = {
 			isa = PBXGroup;
 			children = (
+				E4F0E55C29DEE934003DAF26 /* Models */,
+				E4F0E55929DEE46D003DAF26 /* Screen */,
 				E413BB0729D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift */,
 				E413BB0929D9647C00BC7908 /* ContentView.swift */,
 				E413BB0B29D9648000BC7908 /* Assets.xcassets */,
@@ -69,6 +75,22 @@
 				E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4F0E55929DEE46D003DAF26 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E4F0E55C29DEE934003DAF26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E413BB0A29D9647C00BC7908 /* ContentView.swift in Sources */,
+				E4F0E55E29DEEAD7003DAF26 /* ShoppingList.swift in Sources */,
 				E413BB0829D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift in Sources */,
+				E4F0E55B29DEE48D003DAF26 /* AddShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
