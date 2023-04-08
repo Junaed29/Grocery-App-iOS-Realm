@@ -13,6 +13,7 @@
 		E413BB0F29D9648000BC7908 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */; };
 		E413BB1729D96A8900BC7908 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E413BB1629D96A8900BC7908 /* Realm */; };
 		E413BB1929D96A8900BC7908 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E413BB1829D96A8900BC7908 /* RealmSwift */; };
+		E4BD8F7629E14FCA0055031F /* CategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD8F7529E14FCA0055031F /* CategoryFilterView.swift */; };
 		E4E146F529E017FD00D2F609 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146F429E017FD00D2F609 /* ShoppingItem.swift */; };
 		E4E146F829E03D6100D2F609 /* Migrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146F729E03D6100D2F609 /* Migrator.swift */; };
 		E4E146FA29E0601100D2F609 /* ShoppingListItemsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146F929E0601100D2F609 /* ShoppingListItemsScreen.swift */; };
@@ -28,6 +29,7 @@
 		E413BB0929D9647C00BC7908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E413BB0B29D9648000BC7908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4BD8F7529E14FCA0055031F /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
 		E4E146F429E017FD00D2F609 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		E4E146F729E03D6100D2F609 /* Migrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrator.swift; sourceTree = "<group>"; };
 		E4E146F929E0601100D2F609 /* ShoppingListItemsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemsScreen.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E4E146FE29E1424200D2F609 /* ShoppingListItemCell.swift */,
+				E4BD8F7529E14FCA0055031F /* CategoryFilterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			files = (
 				E413BB0A29D9647C00BC7908 /* ContentView.swift in Sources */,
 				E4E146FA29E0601100D2F609 /* ShoppingListItemsScreen.swift in Sources */,
+				E4BD8F7629E14FCA0055031F /* CategoryFilterView.swift in Sources */,
 				E4F0E55E29DEEAD7003DAF26 /* ShoppingList.swift in Sources */,
 				E4E146F829E03D6100D2F609 /* Migrator.swift in Sources */,
 				E413BB0829D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift in Sources */,

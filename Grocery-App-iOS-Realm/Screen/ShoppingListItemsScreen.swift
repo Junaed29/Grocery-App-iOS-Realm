@@ -14,14 +14,28 @@ struct ShoppingListItemsScreen: View {
     @ObservedRealmObject var shoppingList: ShoppingList
     @State private var selectedItemids: [ObjectId] = []
     
+    @State var selectedCategory = "All"
+    
+    var items: [ShoppingItem]{
+        if selectedCategory == "All"{
+            return Array(shoppingList.items)
+        }else{
+            return shoppingList.items.sorted(byKeyPath: "title").filter { $0.category == selectedCategory}
+        }
+    }
+    
     var body: some View {
         VStack{
-            if shoppingList.items.isEmpty{
-                Text("No item added")
+            
+            CategoryFilterView(selectedCategory: $selectedCategory)
+                .padding([.top,.bottom, .leading])
+            
+            if items.isEmpty{
+                Text("No item found")
             }
             
             List {
-                ForEach(shoppingList.items, id: \.id) {item in
+                ForEach(items, id: \.id) {item in
                     ShoppingListItemCell(shoppingItem: item, isSelected: selectedItemids.contains(item.id)) { selectionState in
                         if(selectionState){
                             selectedItemids.append(item.id)
@@ -31,7 +45,7 @@ struct ShoppingListItemsScreen: View {
                             }
                         }
                     }
-                }
+                }.onDelete(perform: deleteItem)
             }
         }
         .navigationTitle(shoppingList.title)
@@ -46,6 +60,15 @@ struct ShoppingListItemsScreen: View {
         }
         .sheet(isPresented: $isPresented) {
             AddShoppingItemScreen(shoppingList: shoppingList)
+        }
+    }
+    
+    private func deleteItem(indexSet: IndexSet){
+        
+        for index in indexSet{
+            if let deleteIndex = shoppingList.items.firstIndex(of: items[index]){
+                $shoppingList.items.remove(at: deleteIndex)
+            }
         }
     }
 }
