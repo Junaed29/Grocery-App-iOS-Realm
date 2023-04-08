@@ -17,7 +17,7 @@ struct AddShoppingListScreen: View {
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 TextField("Enter title", text: $title)
                 TextField("Enter address", text: $address)

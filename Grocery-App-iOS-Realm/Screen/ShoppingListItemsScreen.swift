@@ -36,15 +36,22 @@ struct ShoppingListItemsScreen: View {
             
             List {
                 ForEach(items, id: \.id) {item in
-                    ShoppingListItemCell(shoppingItem: item, isSelected: selectedItemids.contains(item.id)) { selectionState in
-                        if(selectionState){
-                            selectedItemids.append(item.id)
-                        }else{
-                            if let index = selectedItemids.firstIndex(where: {$0 == item.id}){
-                                selectedItemids.remove(at: index)
+                    
+                    NavigationLink {
+                        AddShoppingItemScreen(shoppingList: shoppingList, itemToEdit: item)
+                    } label: {
+                        ShoppingListItemCell(shoppingItem: item, isSelected: selectedItemids.contains(item.id)) { selectionState in
+                            if(selectionState){
+                                selectedItemids.append(item.id)
+                            }else{
+                                if let index = selectedItemids.firstIndex(where: {$0 == item.id}){
+                                    selectedItemids.remove(at: index)
+                                }
                             }
                         }
                     }
+
+                    
                 }.onDelete(perform: deleteItem)
             }
         }
@@ -64,7 +71,6 @@ struct ShoppingListItemsScreen: View {
     }
     
     private func deleteItem(indexSet: IndexSet){
-        
         for index in indexSet{
             if let deleteIndex = shoppingList.items.firstIndex(of: items[index]){
                 $shoppingList.items.remove(at: deleteIndex)
@@ -75,8 +81,9 @@ struct ShoppingListItemsScreen: View {
 
 struct ShoppingListItemsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack{
+        NavigationView{
             ShoppingListItemsScreen(shoppingList: ShoppingList())
+                .navigationTitle("HAha")
         }
     }
 }

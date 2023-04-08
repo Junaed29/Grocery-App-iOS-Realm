@@ -14,16 +14,19 @@ struct ContentView: View {
     @ObservedResults(ShoppingList.self) var shoppingList
     
     var body: some View {
-        NavigationStack{
+        NavigationView{
             ZStack {
                 List {
                     ForEach(shoppingList, id: \.id) { listItem in
-                        NavigationLink(value: listItem) {
+                        NavigationLink {
+                            ShoppingListItemsScreen(shoppingList: listItem)
+                        } label: {
                             VStack(alignment: .leading){
                                 Text(listItem.title)
                                 Text(listItem.address).opacity(0.4)
                             }
                         }
+
                     }.onDelete(perform: $shoppingList.remove(atOffsets:))
                 }
                 
@@ -39,13 +42,10 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
-
                 }
             }
             .sheet(isPresented: $isPresented) {
                 AddShoppingListScreen()
-            }.navigationDestination(for: ShoppingList.self) { listItem in
-                ShoppingListItemsScreen(shoppingList: listItem)
             }
         }
          
