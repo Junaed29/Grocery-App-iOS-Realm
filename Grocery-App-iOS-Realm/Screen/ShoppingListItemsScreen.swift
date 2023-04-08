@@ -12,10 +12,27 @@ struct ShoppingListItemsScreen: View {
     
     @State private var isPresented = false
     @ObservedRealmObject var shoppingList: ShoppingList
+    @State private var selectedItemids: [ObjectId] = []
     
     var body: some View {
         VStack{
-            Text("Hello, World!")
+            if shoppingList.items.isEmpty{
+                Text("No item added")
+            }
+            
+            List {
+                ForEach(shoppingList.items, id: \.id) {item in
+                    ShoppingListItemCell(shoppingItem: item, isSelected: selectedItemids.contains(item.id)) { selectionState in
+                        if(selectionState){
+                            selectedItemids.append(item.id)
+                        }else{
+                            if let index = selectedItemids.firstIndex(where: {$0 == item.id}){
+                                selectedItemids.remove(at: index)
+                            }
+                        }
+                    }
+                }
+            }
         }
         .navigationTitle(shoppingList.title)
         .toolbar {

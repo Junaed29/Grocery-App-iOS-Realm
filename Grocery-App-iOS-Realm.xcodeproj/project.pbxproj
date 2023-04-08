@@ -17,6 +17,7 @@
 		E4E146F829E03D6100D2F609 /* Migrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146F729E03D6100D2F609 /* Migrator.swift */; };
 		E4E146FA29E0601100D2F609 /* ShoppingListItemsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146F929E0601100D2F609 /* ShoppingListItemsScreen.swift */; };
 		E4E146FC29E061B500D2F609 /* AddShoppingItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146FB29E061B500D2F609 /* AddShoppingItemScreen.swift */; };
+		E4E146FF29E1424200D2F609 /* ShoppingListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146FE29E1424200D2F609 /* ShoppingListItemCell.swift */; };
 		E4F0E55B29DEE48D003DAF26 /* AddShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */; };
 		E4F0E55E29DEEAD7003DAF26 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		E4E146F729E03D6100D2F609 /* Migrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrator.swift; sourceTree = "<group>"; };
 		E4E146F929E0601100D2F609 /* ShoppingListItemsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemsScreen.swift; sourceTree = "<group>"; };
 		E4E146FB29E061B500D2F609 /* AddShoppingItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingItemScreen.swift; sourceTree = "<group>"; };
+		E4E146FE29E1424200D2F609 /* ShoppingListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemCell.swift; sourceTree = "<group>"; };
 		E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListScreen.swift; sourceTree = "<group>"; };
 		E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 		E413BB0629D9647C00BC7908 /* Grocery-App-iOS-Realm */ = {
 			isa = PBXGroup;
 			children = (
+				E4E146FD29E1422600D2F609 /* Views */,
 				E4E146F629E03CED00D2F609 /* Utils */,
 				E4F0E55C29DEE934003DAF26 /* Models */,
 				E4F0E55929DEE46D003DAF26 /* Screen */,
@@ -92,6 +95,14 @@
 				E4E146F729E03D6100D2F609 /* Migrator.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E4E146FD29E1422600D2F609 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4E146FE29E1424200D2F609 /* ShoppingListItemCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E4F0E55929DEE46D003DAF26 /* Screen */ = {
@@ -196,6 +207,7 @@
 				E4E146F829E03D6100D2F609 /* Migrator.swift in Sources */,
 				E413BB0829D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift in Sources */,
 				E4E146F529E017FD00D2F609 /* ShoppingItem.swift in Sources */,
+				E4E146FF29E1424200D2F609 /* ShoppingListItemCell.swift in Sources */,
 				E4E146FC29E061B500D2F609 /* AddShoppingItemScreen.swift in Sources */,
 				E4F0E55B29DEE48D003DAF26 /* AddShoppingListScreen.swift in Sources */,
 			);
