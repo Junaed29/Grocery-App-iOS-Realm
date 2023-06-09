@@ -37,9 +37,7 @@ struct ShoppingListItemsScreen: View {
             List {
                 ForEach(items, id: \.id) {item in
                     
-                    NavigationLink {
-                        AddShoppingItemScreen(shoppingList: shoppingList, itemToEdit: item)
-                    } label: {
+                    NavigationLink(value: Routes.toAddShoppingItemScreen(shoppingList, item)) {
                         ShoppingListItemCell(shoppingItem: item, isSelected: selectedItemids.contains(item.id)) { selectionState in
                             if(selectionState){
                                 selectedItemids.append(item.id)
@@ -51,7 +49,6 @@ struct ShoppingListItemsScreen: View {
                         }
                     }
 
-                    
                 }.onDelete(perform: deleteItem)
             }
         }

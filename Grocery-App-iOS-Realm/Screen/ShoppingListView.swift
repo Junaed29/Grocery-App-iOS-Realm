@@ -8,19 +8,18 @@
 import SwiftUI
 import RealmSwift
 
-struct ContentView: View {
+struct ShoppingListView: View {
     
     @State private var isPresented = false
     @ObservedResults(ShoppingList.self) var shoppingList
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ZStack {
                 List {
                     ForEach(shoppingList, id: \.id) { listItem in
-                        NavigationLink {
-                            ShoppingListItemsScreen(shoppingList: listItem)
-                        } label: {
+                        
+                        NavigationLink(value: Routes.toShoppingListItemsView(listItem)) {
                             VStack(alignment: .leading){
                                 Text(listItem.title)
                                 Text(listItem.address).opacity(0.4)
@@ -47,6 +46,7 @@ struct ContentView: View {
             .sheet(isPresented: $isPresented) {
                 AddShoppingListScreen()
             }
+            .modifier(RouteModifier())
         }
          
     }
@@ -54,6 +54,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ShoppingListView()
     }
 }

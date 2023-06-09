@@ -116,7 +116,7 @@ struct AddShoppingItemScreen: View {
                 
                 try realm.write {
                     objectTopdate.title    = title
-                    objectTopdate.quentity = Int(quentity) ?? 1
+                    objectTopdate.quentity = Int(quentity) ?? 1 
                     objectTopdate.category = selectedCategory
                 }
             }catch{

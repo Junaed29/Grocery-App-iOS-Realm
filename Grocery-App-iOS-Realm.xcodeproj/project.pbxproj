@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E413BB0829D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413BB0729D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift */; };
-		E413BB0A29D9647C00BC7908 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413BB0929D9647C00BC7908 /* ContentView.swift */; };
+		E413BB0A29D9647C00BC7908 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413BB0929D9647C00BC7908 /* ShoppingListView.swift */; };
 		E413BB0C29D9648000BC7908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E413BB0B29D9648000BC7908 /* Assets.xcassets */; };
 		E413BB0F29D9648000BC7908 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */; };
 		E413BB1729D96A8900BC7908 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E413BB1629D96A8900BC7908 /* Realm */; };
@@ -21,12 +21,13 @@
 		E4E146FF29E1424200D2F609 /* ShoppingListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E146FE29E1424200D2F609 /* ShoppingListItemCell.swift */; };
 		E4F0E55B29DEE48D003DAF26 /* AddShoppingListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */; };
 		E4F0E55E29DEEAD7003DAF26 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */; };
+		E4F75BD32A33101F00EE3E60 /* RouteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F75BD22A33101F00EE3E60 /* RouteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E413BB0429D9647C00BC7908 /* Grocery-App-iOS-Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery-App-iOS-Realm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E413BB0729D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocery_App_iOS_RealmApp.swift; sourceTree = "<group>"; };
-		E413BB0929D9647C00BC7908 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E413BB0929D9647C00BC7908 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
 		E413BB0B29D9648000BC7908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E413BB0E29D9648000BC7908 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4BD8F7529E14FCA0055031F /* CategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterView.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		E4E146FE29E1424200D2F609 /* ShoppingListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemCell.swift; sourceTree = "<group>"; };
 		E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingListScreen.swift; sourceTree = "<group>"; };
 		E4F0E55D29DEEAD7003DAF26 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		E4F75BD22A33101F00EE3E60 /* RouteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,6 @@
 				E4F0E55C29DEE934003DAF26 /* Models */,
 				E4F0E55929DEE46D003DAF26 /* Screen */,
 				E413BB0729D9647C00BC7908 /* Grocery_App_iOS_RealmApp.swift */,
-				E413BB0929D9647C00BC7908 /* ContentView.swift */,
 				E413BB0B29D9648000BC7908 /* Assets.xcassets */,
 				E413BB0D29D9648000BC7908 /* Preview Content */,
 			);
@@ -94,6 +95,7 @@
 		E4E146F629E03CED00D2F609 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E4F75BD22A33101F00EE3E60 /* RouteManager.swift */,
 				E4E146F729E03D6100D2F609 /* Migrator.swift */,
 			);
 			path = Utils;
@@ -111,6 +113,7 @@
 		E4F0E55929DEE46D003DAF26 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				E413BB0929D9647C00BC7908 /* ShoppingListView.swift */,
 				E4F0E55A29DEE48C003DAF26 /* AddShoppingListScreen.swift */,
 				E4E146F929E0601100D2F609 /* ShoppingListItemsScreen.swift */,
 				E4E146FB29E061B500D2F609 /* AddShoppingItemScreen.swift */,
@@ -204,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E413BB0A29D9647C00BC7908 /* ContentView.swift in Sources */,
+				E413BB0A29D9647C00BC7908 /* ShoppingListView.swift in Sources */,
 				E4E146FA29E0601100D2F609 /* ShoppingListItemsScreen.swift in Sources */,
 				E4BD8F7629E14FCA0055031F /* CategoryFilterView.swift in Sources */,
 				E4F0E55E29DEEAD7003DAF26 /* ShoppingList.swift in Sources */,
@@ -213,6 +216,7 @@
 				E4E146F529E017FD00D2F609 /* ShoppingItem.swift in Sources */,
 				E4E146FF29E1424200D2F609 /* ShoppingListItemCell.swift in Sources */,
 				E4E146FC29E061B500D2F609 /* AddShoppingItemScreen.swift in Sources */,
+				E4F75BD32A33101F00EE3E60 /* RouteManager.swift in Sources */,
 				E4F0E55B29DEE48D003DAF26 /* AddShoppingListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
